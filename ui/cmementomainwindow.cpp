@@ -15,6 +15,8 @@ CMementoMainWindow::CMementoMainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    setWindowTitle(QString("Undoable Inventory - %1").arg(qApp->applicationVersion()));
+
     inventoryModel_ = new CInventoryModel(&inventoryManager_);
 
     QQmlContext *ctxt = ui->inventoryQuickWidget->rootContext();
