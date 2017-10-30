@@ -100,7 +100,8 @@ private:
     static int maxCommands_;
 
 public:
-    CUndoableInventoryAction(CUndoableInventory *newReceiver, function<void(const CUndoableInventory&)> newReceiverAction);
+    CUndoableInventoryAction(CUndoableInventory *newReceiver,
+                             function<void(const CUndoableInventory&)> newReceiverAction);
     virtual ~CUndoableInventoryAction();
 
     virtual void execute();
